@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+.page{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: loader;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loader{
+    0%{
+        background-color: red;top: 0;
+        transform: rotate(360deg) scale(-2)
+    }
+    50%{
+        background-color: blue;top: 300px;
+        transform: rotate(-360deg)
+        scale(2);
+
+    }
+    100%{
+        background-color: rgb(58, 58, 54);
+        transform: rotate(360deg)
+        scale(-2);
+
+    }
+}
+
+.page2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sleigh {
+    offset-path: path(
+      "M-200 80 L -90 80 Q 60 80 60 -10 A 50 50 0 0 0 -60 -10 Q -60 80 90 80 L 200 80"
+    );
+    animation: roller-coaster 6000ms infinite linear;
+  }
+  
+  @keyframes roller-coaster {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+
